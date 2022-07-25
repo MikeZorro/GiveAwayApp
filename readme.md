@@ -1,10 +1,8 @@
+This is an app that helps connect people who wish to donate stuff with charities.
 
-Przed przystąpieniem do pracy  przeczytaj poniższe wskazówki.
-## Jak zacząć?
+Build with :
 
-1. Zaimportuj projekt jako projekt `Maven`, wg poniższych wskazówek:
-
-	* W `IntelliJ` wybieramy: `File –> New –> Project from Existing Sources...`
-	* Wskazujemy lokalizację katalogu ze sklonowanym projektem i zatwierdzamy.
-	* Następnie w nowym oknie wybieramy: `Import project from external model` i wskazujemy `Maven`
-	* Wybieramy kolejno opcje: `Next –> Next –> Next –> Finish`
+Spring Boot
+Spring Form
+Hibernate
+Spring Data JPA
