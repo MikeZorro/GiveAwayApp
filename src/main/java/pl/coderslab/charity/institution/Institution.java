@@ -1,6 +1,7 @@
 package pl.coderslab.charity.institution;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 
 @Entity
 @NoArgsConstructor
+@Getter
 public class Institution {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
