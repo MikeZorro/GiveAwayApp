@@ -9,6 +9,8 @@ import pl.coderslab.charity.donation.DonationRepository;
 import pl.coderslab.charity.institution.Institution;
 import pl.coderslab.charity.institution.InstitutionRepository;
 
+import java.util.List;
+
 @Controller
 public class TestController {
     private final CategoryRepository categoryRepository;
@@ -36,4 +38,12 @@ public class TestController {
         categoryRepository.save(new Category("inne"));
         return "Its working!";
     }
+
+    @RequestMapping("/test2")
+    @ResponseBody
+    public String test2(){
+        List<Institution> list = institutionRepository.findAll();
+        return list.toString();
+    }
+
 }

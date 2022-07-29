@@ -4,6 +4,7 @@
 <%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <%@ include file="/WEB-INF/views/header.jsp" %>
 
+
     <div class="slogan container container--90">
         <div class="slogan--item">
             <h1>
