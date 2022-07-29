@@ -19,6 +19,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Controller
+@RequestMapping("/app")
 public class DonationController {
     private final CategoryRepository categoryRepository;
     private final DonationRepository donationRepository;
@@ -53,7 +54,7 @@ public class DonationController {
         }
         HttpSession session = request.getSession();
         session.setAttribute("donation", donation);
-        return "redirect:/donate/confirmation";
+        return "redirect:/app/donate/confirmation";
     }
 
     @RequestMapping(value = "/donate/confirmation", method = RequestMethod.GET)
@@ -65,7 +66,9 @@ public class DonationController {
     }
 
     @RequestMapping(value = "/donate/confirmation", method = RequestMethod.POST)
-    public String donateActionFinal(Donation donation) {
+    public String donateActionFinal( HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        Donation donation = (Donation) session.getAttribute("donation");
         donationRepository.save(donation);
         return "donationfinal";
     }
