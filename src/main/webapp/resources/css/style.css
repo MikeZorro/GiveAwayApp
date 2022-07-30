@@ -674,8 +674,8 @@ form .form-group--dropdown .dropdown.selecting ul {
 }
 
 /* line 120, scss/modules/_forms.scss */
-form .form-group--dropdown .dropdown li,
-form .form-group--dropdown .dropdown > div {
+.form-group--dropdown .dropdown li,
+.form-group--dropdown .dropdown > div {
   border: 1px solid #3c3c3c;
   padding: 8px 10px;
   font-size: 1.8rem;
@@ -683,7 +683,7 @@ form .form-group--dropdown .dropdown > div {
 }
 
 /* line 128, scss/modules/_forms.scss */
-form .form-group--dropdown .dropdown input {
+ .form-group--dropdown .dropdown input {
   display: none;
   opacity: 0;
   position: absolute;
@@ -705,7 +705,7 @@ form .form-group--dropdown .dropdown:after {
 }
 
 /* line 149, scss/modules/_forms.scss */
-form .form-group--dropdown ul {
+ .form-group--dropdown ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -717,21 +717,23 @@ form .form-group--dropdown ul {
 }
 
 /* line 160, scss/modules/_forms.scss */
-form .form-group--dropdown ul li:not(:first-of-type) {
+.form-group--dropdown ul li:not(:first-of-type) {
   margin: 10px 0;
 }
 
 /* line 164, scss/modules/_forms.scss */
-form .form-group--dropdown ul li:last-of-type {
+ .form-group--dropdown ul li:last-of-type {
   margin-bottom: 0;
 }
 
 /* line 173, scss/modules/_forms.scss */
-form .form-section h4 {
+.form-section h4 {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-style: normal;
   font-size: 1.8rem;
+  padding-bottom: 5px;
+
 }
 
 /* line 178, scss/modules/_forms.scss */
@@ -751,7 +753,7 @@ form .form-section--checkboxes > div {
 }
 
 /* line 189, scss/modules/_forms.scss */
-form .form-section--columns {
+.form-section--columns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -760,7 +762,7 @@ form .form-section--columns {
 }
 
 /* line 193, scss/modules/_forms.scss */
-form .form-section--columns > div {
+ .form-section--columns > div {
   padding-right: 20px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -768,12 +770,12 @@ form .form-section--columns > div {
 }
 
 /* line 197, scss/modules/_forms.scss */
-form .form-section--columns > div:last-of-type {
+ .form-section--columns > div:last-of-type {
   padding-right: 0;
 }
 
 /* line 203, scss/modules/_forms.scss */
-form .form-section--columns .form-group label {
+.form-section--columns .form-group label {
   width: 100%;
   display: block;
   display: -webkit-box;
@@ -788,7 +790,7 @@ form .form-section--columns .form-group label {
 }
 
 /* line 210, scss/modules/_forms.scss */
-form .form-section--columns .form-group label textarea, form .form-section--columns .form-group label input {
+ .form-section--columns .form-group label textarea, form .form-section--columns .form-group label input {
   margin-left: 20px;
   max-width: 200px;
 }
@@ -1785,19 +1787,19 @@ footer .bottom-line--icons a img {
 }
 
 /* line 149, scss/style.scss */
-.form--steps form .summary {
+.form--steps .summary {
   padding: 0 15px;
 }
 
 /* line 152, scss/style.scss */
-.form--steps form .summary ul {
+.form--steps .summary ul {
   list-style: none;
-  padding: 0;
+  padding-: 0;
   margin: 0;
 }
 
 /* line 157, scss/style.scss */
-.form--steps form .summary ul li {
+.form--steps .summary ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1809,7 +1811,7 @@ footer .bottom-line--icons a img {
 }
 
 /* line 163, scss/style.scss */
-.form--steps form .summary ul li .icon {
+.form--steps .summary ul li .icon {
   width: 60px;
   height: 60px;
   background-size: cover;
@@ -1817,28 +1819,28 @@ footer .bottom-line--icons a img {
 }
 
 /* line 169, scss/style.scss */
-.form--steps form .summary ul li .icon-bag {
+.form--steps .summary ul li .icon-bag {
   background-image: url(../images/icon-bag.png);
 }
 
 /* line 173, scss/style.scss */
-.form--steps form .summary ul li .icon-hand {
+.form--steps .summary ul li .icon-hand {
   background-image: url(../images/icon-hand.png);
 }
 
-.form--steps form .summary {
+.form--steps .summary {
   padding: 0 15px;
 }
 
 /* line 152, scss/style.scss */
-.form--steps form .summary ul {
+.form--steps .summary ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 /* line 157, scss/style.scss */
-.form--steps form .summary ul li {
+.form--steps .summary ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1850,7 +1852,7 @@ footer .bottom-line--icons a img {
 }
 
 /* line 163, scss/style.scss */
-.form--steps form .summary ul li .icon {
+.form--steps .summary ul li .icon {
   width: 60px;
   height: 60px;
   background-size: cover;
@@ -1858,12 +1860,12 @@ footer .bottom-line--icons a img {
 }
 
 /* line 169, scss/style.scss */
-.form--steps form .summary ul li .icon-bag {
+.form--steps .summary ul li .icon-bag {
   background-image: url(../images/icon-bag.png);
 }
 
 /* line 173, scss/style.scss */
-.form--steps form .summary ul li .icon-hand {
+.form--steps .summary ul li .icon-hand {
   background-image: url(../images/icon-hand.png);
 }
 

@@ -57,6 +57,8 @@
         <form:form method="post" modelAttribute="donation">
             <!-- STEP 1: class .active is switching steps -->
             <div data-step="1" class="active">
+                <H1 style="color:crimson"><form:errors path="*">This form has errors, please try again</form:errors></H1>
+
                 <h3>Zaznacz co chcesz oddać:</h3>
 
                 <c:forEach var="category" items="${categoryList}">

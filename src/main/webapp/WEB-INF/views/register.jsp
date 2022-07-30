@@ -47,11 +47,12 @@
             <form:password  path="password" placeholder="Password"/>
             <p style="color:crimson"><form:errors path="password"/></p>
         </div>
-        <!--
+
         <div class="form-group">
-            < path="password" placeholder="Repeat password"/>
+            <input type="password"  name="password2" placeholder="Repeat password"/>
+            <p style="color:crimson"><form:errors path="password"/></p>
         </div>
-        -->
+
         <div class="form-group form-group--buttons">
             <a href="/login" class="btn btn--without-border">Zaloguj się</a>
             <input type="submit" class="btn btn--without-border" value="Załóż konto"/>
