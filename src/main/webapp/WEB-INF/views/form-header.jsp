@@ -18,7 +18,7 @@
             <li class="logged-user">
                 Witaj ${loggedUser.firstName}
                 <ul class="dropdown">
-                    <li><a href="#">Profil</a></li>
+                    <li><a href="/app/profile/view">Profil</a></li>
                     <li><a href="#">Moje zbiórki</a></li>
                     <li><a href="/logout">Wyloguj</a></li>
                 </ul>
