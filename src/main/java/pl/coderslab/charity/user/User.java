@@ -15,8 +15,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @NotEmpty(message = "Please enter valid email address")
-    @Email(message = "Please enter valid email address")
+    @NotEmpty(message = "Please enter valid email address!")
+    @Email(message = "Please enter valid email address!")
     @Column(unique = true)
     private String email;
     @Size(min = 3, message = "Password too short")
