@@ -82,18 +82,27 @@
     <div class="help--slides active" data-id="1">
         <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy.
             Możesz sprawdzić czym się zajmują.</p>
-
         <ul class="help--slides-items">
-            <c:forEach var="institutions" items="${institutions}">
+<c:forEach var="institutions" items="${institutions}" varStatus="loopstatus">
+
             <li>
                 <div class="col">
                     <div class="title">Fundacja "${institutions.name}"</div>
                     <div class="subtitle">Cel i misja: ${institutions.description}</div>
                 </div>
             </li>
-            </c:forEach>
+            <c:if test="${loopstatus.count} % 2 = 0}">
+                <li>
+                    <div class="col">
+                        <div class="title"></div>
+                        <div class="subtitle"></div>
+                    </div>
+                </li>
+            </c:if>
+</c:forEach>
 
         </ul>
+
     </div>
 
 </section>
