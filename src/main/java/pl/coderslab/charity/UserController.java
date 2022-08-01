@@ -66,7 +66,8 @@ public class UserController {
 
 
     @RequestMapping("/login")
-    public String login() {
+    public String login(HttpSession session) {
+        session.removeAttribute("message");
         return "login";
     }
 
