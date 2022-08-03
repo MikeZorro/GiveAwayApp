@@ -28,6 +28,12 @@ public class ProfileController {
         return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 
+    private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
+
+    boolean verifyPassword(String password) {
+        return password.matches(PASSWORD_PATTERN);
+    }
+
     @RequestMapping(value = "/view", method = RequestMethod.GET)
     public String viewProfile(Model model, HttpSession session) {
         model.addAttribute("user", session.getAttribute("loggedUser"));
@@ -48,6 +54,7 @@ public class ProfileController {
         }
         User updatedUser = user;
         updatedUser.setPassword(existingUser.getPassword());
+        updatedUser.setToken(existingUser.getToken());
         userRepository.save(updatedUser);
         session.setAttribute("loggedUser", updatedUser);
         return "redirect:/app/profile/view";
@@ -61,6 +68,7 @@ public class ProfileController {
 
     @RequestMapping(value = "/password", method = RequestMethod.POST)
     public String editPasswordSave(@RequestParam String password, @RequestParam String password2, HttpSession session) {
+        User userToBeUpdated = (User) session.getAttribute("loggedUser");
         if (!password.equals(password2)){
             session.setAttribute("errorMsg", "Passwords not matching!");
             return "profile-password";
@@ -69,8 +77,11 @@ public class ProfileController {
             session.setAttribute("errorMsg", "Passwords too short!");
             return "profile-password";
         }
+        if (!verifyPassword(password)) {
+            session.setAttribute("errorMsg", "Passwords must be at least 8 characters long, contain small and capital letters, at least 1 number and at least 1 special sign");
+            return "profile-password";
+        }
         session.removeAttribute("errorMsg");
-        User userToBeUpdated = (User) session.getAttribute("loggedUser");
         userToBeUpdated.setPassword(hashPassword(password));
         userRepository.save(userToBeUpdated);
         session.removeAttribute("loggedUser");

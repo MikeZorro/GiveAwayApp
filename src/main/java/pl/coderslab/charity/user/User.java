@@ -25,4 +25,5 @@ public class User {
     private String firstName;
     @NotEmpty
     private String lastName;
+    private String token;
 }
